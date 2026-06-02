@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navigation Bar</title>
+
+
+  <style>
+
+    * { 
+        margin: 0; padding: 0; 
+        box-sizing: border-box; 
+    }
+
+    nav {
+      background-color: darkblue;  
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+
+    .logo {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 15px 20px 15px 0;
+      flex-shrink: 0;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+    }
+
+    ul li a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 18px 16px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    ul li a:hover {
+      background-color: #003399;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      ul {
+        flex-direction: column;  /* vertical on mobile */
+        width: 100%;
+      }
+
+      ul li {
+        width: 100%;
+      }
+
+      ul li a {
+        padding: 14px 16px;
+        border-top: 1px solid #003399;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">LOGO</div>
+    <ul>
+      <li><a href="ex1.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
