@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Profile Card</title>
+
+  <style>
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f4ff;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .card-image {
+      flex-shrink: 0;
+      width: 160px;
+      background: #c8d8f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card-image img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .card-details {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .card-details h2 {
+      font-size: 1.3rem;
+      color: #1a1a2e;
+    }
+
+    .card-details p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .card-details span {
+      font-weight: bold;
+      color: #001f5b;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .card-image {
+        width: 100%;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-image">
+      <img
+        src="image2.png"
+        alt="Student Photo"
+        style="border-radius: 50%; border: 3px solid #001f5b;"
+      />
+    </div>
+    <div class="card-details">
+      <h2>Harshini Sayana</h2>
+      <p><span>Roll No:</span> 23B81A05L6</p>
+      <p><span>Branch:</span> Computer Science</p>
+      <p><span>Email:</span> harshini@cvr.ac.in</p>
+    </div>
+  </div>
+</body>
+</html>

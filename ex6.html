@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Expanding Card</title>
+
+  <style>
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #e8f0fe;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      width: 200px;
+      height: 200px;
+      background: #001f5b;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .card:hover {
+      width: 250px;
+      height: 250px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">Hover Me</div>
+</body>
+</html>
