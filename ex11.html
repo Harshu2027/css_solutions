@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Bouncing Text</title>
+
+  <style>
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: lightsalmon;
+    }
+
+    .bounce-text {
+      display: flex;
+      gap: 6px;
+    }
+
+    .bounce-text span {
+      font-size: 3rem;
+      font-weight: bold;
+      color: black;
+      display: inline-block;
+      animation: bounce 0.6s ease infinite alternate;
+      font-family: Arial, sans-serif;
+    }
+
+    .bounce-text span:nth-child(1) { animation-delay: 0.0s; }
+    .bounce-text span:nth-child(2) { animation-delay: 0.2s; }
+    .bounce-text span:nth-child(3) { animation-delay: 0.4s; }
+    .bounce-text span:nth-child(4) { animation-delay: 0.6s; }
+    .bounce-text span:nth-child(5) { animation-delay: 0.8s; }
+    .bounce-text span:nth-child(6) { animation-delay: 1.0s; }
+    .bounce-text span:nth-child(7) { animation-delay: 1.2s; }
+
+    @keyframes bounce {
+      0%   { transform: translateY(0px); }
+      100% { transform: translateY(-25px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bounce-text">
+    <span>W</span>
+    <span>E</span>
+    <span>L</span>
+    <span>C</span>
+    <span>O</span>
+    <span>M</span>
+    <span>E</span>
+  </div>
+</body>
+</html>

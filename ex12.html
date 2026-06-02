@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Traffic Signal</title>
+  <style>
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+    }
+
+    /*.signal-box {
+      background: #333;
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }*/
+
+    .light {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      opacity: 0.2;  
+    }
+
+    .red {
+      background: #ff2200;
+      animation: glowRed 6s infinite;
+    }
+
+    .yellow {
+      background: #ffcc00;
+      animation: glowYellow 6s infinite;
+    }
+
+    .green {
+      background: #00cc44;
+      animation: glowGreen 6s infinite;
+    }
+
+ 
+    @keyframes glowRed {
+      0%,  33.3%  { opacity: 1; box-shadow: 0 0 20px #ff2200; }
+      33.4%, 100% { opacity: 0.2; box-shadow: none; }
+    }
+
+
+    @keyframes glowYellow {
+      0%,  33.2%  { opacity: 0.2; box-shadow: none; }
+      33.3%, 66.6%{ opacity: 1; box-shadow: 0 0 20px #ffcc00; }
+      66.7%, 100% { opacity: 0.2; box-shadow: none; }
+    }
+
+   
+    @keyframes glowGreen {
+      0%,  66.6%  { opacity: 0.2; box-shadow: none; }
+      66.7%, 100% { opacity: 1; box-shadow: 0 0 20px #00cc44; }
+    }
+  </style>
+</head>
+<body>
+  <!--<div class="signal-box">
+    <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+  </div>-->
+  <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+</body>
+</html>
